@@ -23,4 +23,4 @@ jobs:
       run: dotnet restore leetcode-csharp.sln
 
     - name: Run all tests
-      run: dotnet test leetcode-csharp.sln --no-build --verbosity normal
+      run: dotnet test leetcode-csharp.sln --verbosity normal --logger "console;verbosity=detailed"
