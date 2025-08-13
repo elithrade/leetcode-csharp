@@ -79,5 +79,35 @@ namespace tests.easy
             // Assert
             Assert.That(result, Is.False);
         }
+
+        [Test]
+        public void IsAnagram_VeryLongAnagram_ReturnsFalse()
+        {
+            // Arrange
+            var solution = new Solution();
+            string s = new string('a', 10000) + new string('b', 9999) + new string('c', 10000);
+            string t = new string('c', 9999) + new string('b', 10000) + new string('a', 10000);
+
+            // Act
+            var result = solution.IsAnagram(s, t);
+
+            // Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        public void IsAnagram_VeryLongAnagram_ReturnsTrue()
+        {
+            // Arrange
+            var solution = new Solution();
+            string s = new string('a', 10000) + new string('b', 10000) + new string('c', 10000);
+            string t = new string('c', 10000) + new string('b', 10000) + new string('a', 10000);
+
+            // Act
+            var result = solution.IsAnagram(s, t);
+
+            // Assert
+            Assert.That(result, Is.True);
+        }
     }
 }
