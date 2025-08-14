@@ -23,6 +23,23 @@ namespace tests.medium
         }
 
         [Test]
+        public void SolveUsingCharacterCount_ValidAnagrams_ReturnsGroupedAnagrams()
+        {
+            // Arrange
+            var solution = new GroupAnagrams();
+            string[] strs = { "eat", "tea", "tan", "ate", "nat", "bat" };
+
+            // Act
+            var result = solution.Solve_Using_Character_Count(strs);
+
+            // Assert
+            Assert.That(result.Count, Is.EqualTo(3));
+            Assert.That(result[0], Is.EquivalentTo(new[] { "eat", "tea", "ate" }));
+            Assert.That(result[1], Is.EquivalentTo(new[] { "tan", "nat" }));
+            Assert.That(result[2], Is.EquivalentTo(new[] { "bat" }));
+        }
+
+        [Test]
         public void Solve_EmptyArray_ReturnsEmptyList()
         {
             // Arrange
