@@ -1,4 +1,4 @@
-namespace core.easy;
+namespace core.medium;
 
 public class GroupAnagrams
 {
