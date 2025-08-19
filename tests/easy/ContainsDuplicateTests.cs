@@ -9,7 +9,7 @@ public class ContainsDuplicateTests
     public void ContainsDuplicate_ReturnsTrue_WhenDuplicatesExist()
     {
         var solution = new ContainsDuplicate();
-        int[] nums = { 1, 2, 3, 1 };
+        int[] nums = [1, 2, 3, 1];
         bool expected = true;
 
         bool actual = solution.Solve(nums);
@@ -21,7 +21,7 @@ public class ContainsDuplicateTests
     public void ContainsDuplicate_ReturnsFalse_WhenNoDuplicatesExist()
     {
         var solution = new ContainsDuplicate();
-        int[] nums = { 1, 2, 3, 4 };
+        int[] nums = [1, 2, 3, 4];
         bool expected = false;
 
         bool actual = solution.Solve(nums);
@@ -33,7 +33,7 @@ public class ContainsDuplicateTests
     public void ContainsDuplicate_ReturnsTrue_WhenAllElementsAreTheSame()
     {
         var solution = new ContainsDuplicate();
-        int[] nums = { 2, 2, 2, 2 };
+        int[] nums = [2, 2, 2, 2];
         bool expected = true;
 
         bool actual = solution.Solve(nums);

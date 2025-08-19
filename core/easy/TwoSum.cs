@@ -20,7 +20,7 @@ public class TwoSum
             // If the complement exists in the map, we found our pair
             if (numMap.ContainsKey(complement))
             {
-                return new int[] { numMap[complement], i };
+                return [numMap[complement], i];
             }
 
             // Otherwise, add the current number and its index to the map

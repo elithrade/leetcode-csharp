@@ -10,7 +10,7 @@ public class GroupAnagramsTests
     {
         // Arrange
         var solution = new GroupAnagrams();
-        string[] strs = { "eat", "tea", "tan", "ate", "nat", "bat" };
+        string[] strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
         // Act
         var result = solution.Solve(strs);
@@ -27,7 +27,7 @@ public class GroupAnagramsTests
     {
         // Arrange
         var solution = new GroupAnagrams();
-        string[] strs = { "eat", "tea", "tan", "ate", "nat", "bat" };
+        string[] strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
         // Act
         var result = solution.Solve_Using_Character_Count(strs);
@@ -44,7 +44,7 @@ public class GroupAnagramsTests
     {
         // Arrange
         var solution = new GroupAnagrams();
-        string[] strs = { };
+        string[] strs = [];
 
         // Act
         var result = solution.Solve(strs);
@@ -58,7 +58,7 @@ public class GroupAnagramsTests
     {
         // Arrange
         var solution = new GroupAnagrams();
-        string[] strs = { "hello" };
+        string[] strs = ["hello"];
 
         // Act
         var result = solution.Solve(strs);
@@ -73,7 +73,7 @@ public class GroupAnagramsTests
     {
         // Arrange
         var solution = new GroupAnagrams();
-        string[] strs = { "one", "two", "three" };
+        string[] strs = ["one", "two", "three"];
 
         // Act
         var result = solution.Solve(strs);
@@ -88,7 +88,7 @@ public class GroupAnagramsTests
     {
         // Arrange
         var solution = new GroupAnagrams();
-        string[] strs = { "abc", "abc", "abc" };
+        string[] strs = ["abc", "abc", "abc"];
 
         // Act
         var result = solution.Solve(strs);
@@ -103,7 +103,7 @@ public class GroupAnagramsTests
     {
         // Arrange
         var solution = new GroupAnagrams();
-        string[] strs = { "Eat", "tea", "ATE" };
+        string[] strs = ["Eat", "tea", "ATE"];
 
         // Act
         var result = solution.Solve(strs);
@@ -118,7 +118,7 @@ public class GroupAnagramsTests
     {
         // Arrange
         var solution = new GroupAnagrams();
-        string[] strs = { "a bc", "cba", "bac", "bca", "cab" };
+        string[] strs = ["a bc", "cba", "bac", "bca", "cab"];
 
         // Act
         var result = solution.Solve(strs);
@@ -142,7 +142,7 @@ public class GroupAnagramsTests
         string longStr2 = "b" + new string('a', 1000);
         string longStr3 = new string('a', 1001);
 
-        string[] strs = { longStr1, longStr2, longStr3 };
+        string[] strs = [longStr1, longStr2, longStr3];
 
         // Act
         var result = solution.Solve(strs);
@@ -158,7 +158,7 @@ public class GroupAnagramsTests
     {
         // Arrange
         var solution = new GroupAnagrams();
-        string[] strs = { "", "", "a" };
+        string[] strs = ["", "", "a"];
 
         // Act
         var result = solution.Solve(strs);

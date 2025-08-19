@@ -57,7 +57,7 @@ public class TopKFrequentElementsTests
         var result = solution.Solve(nums, k);
 
         // Since all have same frequency, any combination of 2 elements is valid
-        Assert.That(result.Length, Is.EqualTo(2));
+        Assert.That(result, Has.Length.EqualTo(2));
         Assert.That(result.All(x => new[] { 1, 2, 3 }.Contains(x)), Is.True);
     }
 
