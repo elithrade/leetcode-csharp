@@ -29,9 +29,9 @@ public class Solution
         // Count each character's occurrences
         foreach (var c in s)
         {
-            if (charCount.ContainsKey(c))
+            if (charCount.TryGetValue(c, out int value))
             {
-                charCount[c]++;
+                charCount[c] = ++value;
             }
             else
             {
@@ -41,9 +41,9 @@ public class Solution
 
         foreach (var c in t)
         {
-            if (charCount.ContainsKey(c))
+            if (charCount.TryGetValue(c, out int value))
             {
-                charCount[c]--;
+                charCount[c] = --value;
                 if (charCount[c] < 0)
                 {
                     return false; // More occurrences in t than in s

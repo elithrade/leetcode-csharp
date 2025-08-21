@@ -14,17 +14,18 @@ public class GroupAnagrams
         foreach (var str in strs)
         {
             // Sort the string to find its anagram group
-            var sortedStr = new string(str.OrderBy(c => c).ToArray());
+            var sortedStr = new string([.. str.OrderBy(c => c)]);
 
-            if (!anagrams.ContainsKey(sortedStr))
+            if (!anagrams.TryGetValue(sortedStr, out List<string>? value))
             {
-                anagrams[sortedStr] = new List<string>();
+                value = [];
+                anagrams[sortedStr] = value;
             }
 
-            anagrams[sortedStr].Add(str);
+            value.Add(str);
         }
 
-        return anagrams.Values.ToList();
+        return [.. anagrams.Values];
     }
 
     public List<List<string>> Solve_Using_Character_Count(string[] strs)
@@ -39,13 +40,15 @@ public class GroupAnagrams
                 charCount[c - 'a']++;
             }
             string key = string.Join(",", charCount);
-            if (!anagrams.ContainsKey(key))
+            if (!anagrams.TryGetValue(key, out List<string>? value))
             {
-                anagrams[key] = new List<string>();
+                value = [];
+                anagrams[key] = value;
             }
-            anagrams[key].Add(str);
+
+            value.Add(str);
         }
 
-        return anagrams.Values.ToList();
+        return [.. anagrams.Values];
     }
 }

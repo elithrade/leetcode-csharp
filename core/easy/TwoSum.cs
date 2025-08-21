@@ -18,9 +18,9 @@ public class TwoSum
         {
             int complement = target - numbers[i];
             // If the complement exists in the map, we found our pair
-            if (numMap.ContainsKey(complement))
+            if (numMap.TryGetValue(complement, out int value))
             {
-                return [numMap[complement], i];
+                return [value, i];
             }
 
             // Otherwise, add the current number and its index to the map
