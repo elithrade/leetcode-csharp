@@ -9,9 +9,9 @@ public class TwoSumTests
     public void TwoSum_ReturnsCorrectIndices_Example1()
     {
         var solution = new TwoSum();
-        int[] numbers = [2, 7, 11, 15];
+        int[] numbers = [2, 11, 7, 15];
         int target = 9;
-        int[] expected = [0, 1];
+        int[] expected = [0, 2];
 
         int[] actual = solution.Solve(numbers, target);
 

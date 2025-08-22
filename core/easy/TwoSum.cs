@@ -14,20 +14,19 @@ public class TwoSum
         // A dictionary to store numbers and their indices
         var numMap = new Dictionary<int, int>();
 
+        // [2, 7, 11, 15] target = 9, expected output: [0, 1]
         for (int i = 0; i < numbers.Length; i++)
         {
             int complement = target - numbers[i];
             // If the complement exists in the map, we found our pair
             if (numMap.TryGetValue(complement, out int value))
             {
+                // The value is the index of the complement
                 return [value, i];
             }
 
             // Otherwise, add the current number and its index to the map
-            if (!numMap.ContainsKey(numbers[i])) // Avoid adding duplicate keys if numbers contains duplicates
-            {
-                numMap.Add(numbers[i], i);
-            }
+            numMap.TryAdd(numbers[i], i); // 2 -> 0, 7 -> 1, 11 -> 2, 15 -> 3
         }
 
         // In a typical LeetCode scenario, this line would not be reached if a solution is guaranteed.
