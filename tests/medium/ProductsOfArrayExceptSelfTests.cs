@@ -107,7 +107,7 @@ public class ProductsOfArrayExceptSelfTests
         sw.Stop();
 
         Console.WriteLine(
-            $"ProductsOfArrayExceptSelf: execution time of solving array of 1000 numbers O(n^2) took: {sw.GetElapsedNanoseconds()} ns"
+            $"ProductsOfArrayExceptSelf: execution time of solving array of 1000 numbers O(n^2) took: {sw.GetElapsedNanosecondsFormatted()}"
         );
 
         // Act
@@ -116,7 +116,7 @@ public class ProductsOfArrayExceptSelfTests
         sw.Stop();
 
         Console.WriteLine(
-            $"ProductsOfArrayExceptSelf: execution time for solving array of 1000 numbers O(n) took: {sw.GetElapsedNanoseconds()} ns"
+            $"ProductsOfArrayExceptSelf: execution time for solving array of 1000 numbers O(n) took: {sw.GetElapsedNanosecondsFormatted()}"
         );
 
         // Assert

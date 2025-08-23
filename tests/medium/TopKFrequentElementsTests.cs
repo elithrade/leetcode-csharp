@@ -106,7 +106,7 @@ public class TopKFrequentElementsTests
         Assert.That(result, Is.EqualTo(expected));
 
         Console.WriteLine(
-            $"GroupAnagrams: execution time for solving array of 1700 numbers O(n): {stopwatch.GetElapsedNanoseconds()} ns"
+            $"TopKFrequentElements: execution time for solving array of 1700 numbers O(n): {stopwatch.GetElapsedNanosecondsFormatted()}"
         );
 
         stopwatch.Restart();
@@ -116,7 +116,7 @@ public class TopKFrequentElementsTests
         Assert.That(resultMinHeap, Is.EquivalentTo(expected));
 
         Console.WriteLine(
-            $"GroupAnagrams: execution time for solving array of 1700 numbers O(n*log*k): {stopwatch.GetElapsedNanoseconds()} ns"
+            $"TopKFrequentElements: execution time for solving array of 1700 numbers O(n*log*k): {stopwatch.GetElapsedNanosecondsFormatted()}"
         );
     }
 
