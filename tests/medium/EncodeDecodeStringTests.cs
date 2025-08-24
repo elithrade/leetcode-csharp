@@ -1,4 +1,3 @@
-using core;
 using core.medium;
 
 namespace tests.medium;
