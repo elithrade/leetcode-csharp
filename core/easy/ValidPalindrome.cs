@@ -20,9 +20,6 @@ public class ValidPalindrome
             while (right > left && !char.IsLetterOrDigit(s[right]))
                 right--;
 
-            Console.WriteLine($"left: {left}");
-            Console.WriteLine($"right: {right}");
-
             if (char.ToLower(s[left]) != char.ToLower(s[right]))
                 return false;
 
