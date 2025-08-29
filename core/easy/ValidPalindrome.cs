@@ -44,9 +44,6 @@ public class ValidPalindrome
         var newString = sb.ToString();
         var reversed = new string([.. sb.ToString().Reverse()]);
 
-        Console.WriteLine(newString);
-        Console.WriteLine(reversed);
-
         return newString.Equals(reversed, StringComparison.OrdinalIgnoreCase);
     }
 }
